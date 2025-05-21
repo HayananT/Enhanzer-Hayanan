@@ -1,0 +1,18 @@
+mat-form-field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+mat-card {
+  background-color: rgba(255, 255, 255, 0.0); /* Semi-transparent white background */
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 10px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+mat-form-field.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: rgb(124, 189, 209) !important;
+  border-radius: 4px;
+}

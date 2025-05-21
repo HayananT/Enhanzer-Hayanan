@@ -1,0 +1,7 @@
+import { Routes } from '@angular/router';
+
+export const routes: Routes = [
+  { path: '', loadComponent: () => import('./components/book-list/book-list.component').then(m => m.BookListComponent) },
+  { path: 'add', loadComponent: () => import('./components/book-form/book-form.component').then(m => m.BookFormComponent) },
+  { path: 'edit/:id', loadComponent: () => import('./components/book-form/book-form.component').then(m => m.BookFormComponent) }
+];

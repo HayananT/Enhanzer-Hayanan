@@ -1,0 +1,65 @@
+/* Make table modern and clean */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Full width container class */
+.full-width-table {
+  margin-top: 24px;
+  border-radius: 8px;
+}
+
+/* Header styling */
+th.mat-header-cell {
+  padding: 14px 16px;
+  background-color: #3ba4ac;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Table cell styling */
+td.mat-cell {
+  padding: 12px 16px;
+  font-size: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+}
+
+/* Hover effect on row */
+tr.mat-row:hover {
+  background-color: #aaeafd;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Column for icons */
+.icon-column {
+  width: 70px;
+  text-align: center;
+  padding: 0;
+}
+
+/* Buttons look cleaner with spacing */
+.icon-column button {
+  margin: 0 4px;
+  vertical-align: middle;
+}
+
+/* Optional: smooth icon hover effect */
+.mat-icon:hover {
+  color: #7fd0d6;
+  transform: scale(1.1);
+  transition: transform 0.1s, color 0.2s;
+}
+
+/* Make buttons pop a little more */
+button.mat-icon-button {
+  background-color: transparent;
+  border-radius: 50%;
+}

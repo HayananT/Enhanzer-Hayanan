@@ -1,0 +1,57 @@
+<table mat-table [dataSource]="books" class="mat-elevation-z8 full-width-table">
+
+  <!-- ID Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let book"> {{ book.id }} </td>
+  </ng-container>
+
+  <!-- Title Column -->
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef> Title </th>
+    <td mat-cell *matCellDef="let book"> {{ book.title }} </td>
+  </ng-container>
+
+  <!-- Author Column -->
+  <ng-container matColumnDef="author">
+    <th mat-header-cell *matHeaderCellDef> Author </th>
+    <td mat-cell *matCellDef="let book"> {{ book.author }} </td>
+  </ng-container>
+
+  <!-- ISBN Column -->
+  <ng-container matColumnDef="isbn">
+    <th mat-header-cell *matHeaderCellDef> ISBN </th>
+    <td mat-cell *matCellDef="let book"> {{ book.isbn }} </td>
+  </ng-container>
+
+  <!-- Publication Date Column -->
+  <ng-container matColumnDef="publicationDate">
+    <th mat-header-cell *matHeaderCellDef> Publication Date </th>
+    <td mat-cell *matCellDef="let book"> {{ book.publicationDate | date:'mediumDate' }} </td>
+  </ng-container>
+
+	<!-- Edit Column -->
+	<ng-container matColumnDef="edit">
+	<th mat-header-cell *matHeaderCellDef class="icon-column"> Edit </th>
+	<td mat-cell *matCellDef="let book" class="icon-column">
+		<button mat-icon-button color="primary" (click)="onEdit(book)">
+		<mat-icon>edit</mat-icon>
+		</button>
+	</td>
+	</ng-container>
+
+	<!-- Delete Column -->
+	<ng-container matColumnDef="delete">
+	<th mat-header-cell *matHeaderCellDef class="icon-column"> Remove </th>
+	<td mat-cell *matCellDef="let book" class="icon-column">
+		<button mat-icon-button color="warn" (click)="onDelete(book.id)">
+		<mat-icon>delete</mat-icon>
+		</button>
+	</td>
+	</ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>

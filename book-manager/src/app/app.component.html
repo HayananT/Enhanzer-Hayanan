@@ -1,0 +1,22 @@
+<!-- app.component.html -->
+
+<div class="opacity-container">
+  <h1>Book Manager</h1>
+
+  <button *ngIf="!currentBook" (click)="currentBook = { id: 0, title: '', author: '', isbn: '', publicationDate: '' }">
+    Add New Book
+  </button>
+
+  <app-book-form
+    *ngIf="currentBook"
+    [book]="currentBook"
+    (save)="onSave($event)"
+    (cancel)="onCancel()"
+  ></app-book-form>
+
+  <app-book-list
+    [books]="books"
+    (edit)="onEdit($event)"
+    (delete)="onDelete($event)"
+  ></app-book-list>
+</div>
